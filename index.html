@@ -108,9 +108,24 @@
     .form-row .col{flex:1}
     input,textarea{width:100%;padding:10px;border:1px solid #e6e9ef;border-radius:8px;font-size:14px}
     button[type=submit]{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;border:0;font-weight:700}
+#contacto form label {
+  display: block;
+  margin-bottom: 16px;
+}
 
+#contacto input[type="email"],
+#contacto textarea {
+  display: block;
+  width: 350px;
+  min-height: 40px;
+  max-height: 80px;
+  height: 40px;
+  resize: vertical;
+  margin-top: 6px;
+}
     /* Footer */
     footer{padding:18px 0;color:var(--muted);font-size:14px}
+  
 
   </style>
 </head>
@@ -222,17 +237,12 @@
             <button type="submit">Send</button>
           </form>
       </div>
+      
     </section>
 
   </main>
 
-  <footer>
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center">
-      <div>© 2025 Mi Sitio</div>
-      <div class="muted">Diseñado como boceto para actividad</div>
-    </div>
-  </footer>
-
+  
   <script>
     // Toggle del menú móvil
     const menuBtn = document.getElementById('menuBtn');
@@ -252,14 +262,20 @@
       menu.style.top = '64px';
       menu.style.boxShadow = '0 6px 18px rgba(2,6,23,0.08)';
     });
-
+    
     // Simulación de envío: previene acción real y muestra alerta
     function handleSubmit(e){
       e.preventDefault();
       alert('Formulario enviado en modo SIMULACIÓN. En una publicación real conecta este formulario a un servicio (Formspree, Netlify Forms) o backend.');
       e.target.reset();
     }
-  </script>
+    </script>
+<footer>
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center">
+    <div>© 2025 Mi Sitio</div>
+    <div class="muted">Diseñado como boceto para actividad</div>
+  </div>
+</footer>
 
 </body>
 </html>
