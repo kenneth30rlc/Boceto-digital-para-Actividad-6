@@ -9,7 +9,7 @@
 
   <style>
     :root{
-      --bg: #f7fafc;
+     --bg: #e3f2fd; /* azul pastel claro */
       --card: #ffffff;
       --accent: #4f46e5; /* indigo */
       --muted: #6b7280;
@@ -24,8 +24,19 @@
     }
     .container{max-width:var(--container);margin:0 auto;padding:0 20px}
 
-    /* Header */
-    header{background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.8));backdrop-filter:blur(4px);position:sticky;top:0;z-index:40;box-shadow:0 1px 6px rgba(15,23,42,0.06)}
+    /* Header .mark */ 
+    header {
+  width: 100%;
+  margin: 0;
+  background: var(--bg); /* usa el color pastel claro */
+  backdrop-filter: blur(4px);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  box-shadow: 0 1px 6px rgba(15,23,42,0.06);
+   padding-left: 24px;
+  padding-right: 24px;
+}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
     .logo{display:flex;align-items:center;gap:10px;font-weight:700}
     .logo .mark{width:36px;height:36px;border-radius:8px;background:var(--accent);display:inline-flex;align-items:center;justify-content:center;color:white;font-size:16px}
@@ -33,12 +44,37 @@
     nav a{color:var(--muted);text-decoration:none;font-weight:600}
     .cta{background:var(--accent);color:#fff;padding:8px 14px;border-radius:10px;text-decoration:none}
 
+    
+    
     /* Mobile menu */
     .menu-btn{display:none;background:none;border:0}
     @media(max-width:800px){
       nav ul{display:none}
       .menu-btn{display:block}
     }
+
+    /* Servicios: tarjetas responsivas */
+.cards {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.card {
+  min-width: 220px;
+  flex: 1 1 220px;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 700px) {
+  .cards {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .card {
+    min-width: 0;
+    width: 100%;
+  }
+}
 
     /* Hero */
     .hero{padding:48px 0}
